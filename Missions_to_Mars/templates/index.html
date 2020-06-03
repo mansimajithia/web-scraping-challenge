@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+        <hr>
+        <!-- Mars Information -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Latest Mars News</h2>
+            </div>
+        </div>
+        </br>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>{{mars_data.news_title}}</h4>
+                <p>{{mars_data.news_p}}</p>
+            </div>
+        </div>
+        <hr>
+        <div class='flex'>
+            <div class="flex-col">
+                <h2 class="heading">Featured Mars Image</h2>
+                <img src="{{ mars_data.featured_image_url}}" alt=" Featured Mars Image" style="max-width: 60%;">
+            </div>
+            <div class="flex-col">
+                <h2 class="heading">Mars Facts</h2>
+                <p>{{mars_data.html_table | safe}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="page-header">
+            <h2 class="text-center"><b>Mars Hemispheres</b></h2>
+        </div>
+        {% for mars in mars_data.mars_dictionary %}
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <img src="{{mars.img_url}}">
+                <div class="caption">
+                    <h3><b>{{mars.title}}</b></h3>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+</body>
+
+</html>

@@ -29,7 +29,7 @@ def scrape():
     soup = BeautifulSoup(response.text, 'html.parser')  
 
     # results are returned as an iterable list
-    results = soup.find_all('div', class_u="slide")
+    results = soup.find_all('div', class_="slide")
 
     # Get News Title and Paragraph
     news_title = soup.find('div', class_='content_title').find('a').text
@@ -54,16 +54,30 @@ def scrape():
 
     # Click on Full Image
     browser.click_link_by_partial_text('FULL IMAGE')
-    # button = browser.find_element_by_xpath('more info')
-    button.click()
+    # # button = browser.find_element_by_xpath('more info')
+    # # button.click()
+    # # browser.click_link_by_partial_text('more info')
+    # html = browser.html
+    # soup = BeautifulSoup(html, 'html.parser')
+    # result = soup.find('div', id='fancybox-lock')
+    # # print(result)
+    # div = result.find('div', class_='buttons')
+    # # link = div.find('a', class_='addthis_button_compact')
+    # more_info = div.find('a', class_='button')['href']
+    # # print(link)
+    # # print(more_info)
+    # # print(div)
+    # link = ('https://www.jpl.nasa.gov'+ more_info)
+    # browser.visit(link)
+    # html = browser.html
+    # soup = BeautifulSoup(html, 'html.parser')
 
+    browser.click_link_by_partial_text('more info')
 
-    # browser.click_link_by_partial_text('more info')
+    # driver = webdriver.Ie()
+    # driver.get(url)
 
-    driver = webdriver.Ie()
-    driver.get(url)
-
-    driver.find_elements_by_link_text("more info").click()
+    # driver.find_elements_by_link_text("more info").click()
 
 
     html = browser.html   
@@ -79,7 +93,7 @@ def scrape():
 
     featured_image_url = ('https://www.jpl.nasa.gov' + href)
 
-    broswer.quit()
+    browser.quit()
 
     # MARS FACTS
     broswer = init_browser
@@ -157,3 +171,7 @@ def scrape():
 
     # Return results
     return mars_data
+
+if  __name__ == "__main__":
+    print(scrape())
+     
