@@ -79,6 +79,10 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 
 1. The Jupyter Notebook containing the scraping code used.
 
+Final product looks similar to this:
+
+![final pt. 1](https://github.com/mansimajithia/web-scraping-challenge/blob/master/Images/final_app_part1.png)
+
 2. Screenshots of your final application.
 
 3. Submit the link to your new repository to BootCampSpot.
@@ -88,5 +92,4 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 ## HTML to display final outcome
 
 * index.html connected to Flask diplays all the data 
-
 
