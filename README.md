@@ -71,8 +71,6 @@ hemisphere_image_urls = [
 
 * Next, a roote route was created that would query the Mongo Database and pass mars data into an HTML template to display the data.
 
-![final_app_part1.png](Images/final_app_part1.png)
-
 - - -
 
 ## Step 3 - Submission
