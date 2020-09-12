@@ -63,10 +63,6 @@ hemisphere_image_urls = [
 
 * Jupyter Notebook was converted into a Python script called `scrape` that executed all of scraping code from above and returnd one Python dictionary containing all of the scraped data.
 
-
-![final_app_part1.png](Images/final_app_part1.png)
-![final_app_part2.png](Images/final_app_part2.png)
-
 - - -
 
 ## Step 2.2 Mongo DB
@@ -74,6 +70,8 @@ hemisphere_image_urls = [
 * A Database was created to store all scraped data
 
 * Next, a roote route was created that would query the Mongo Database and pass mars data into an HTML template to display the data.
+
+![final_app_part1.png](Images/final_app_part1.png)
 
 - - -
 
