@@ -1,7 +1,7 @@
-# Web Scraping Homework - Mission to Mars
+# Web Scraping Challenge - Mission to Mars
 ## Objective
 
-The purpose of the Homework was to build a Full Stack Application. 
+The purpose of the challenge was to build a Full Stack Application. 
 1. The first part of this homework was to use Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinters to build different dictionaries by scraping websites for Mars Data. This included Mars images and table of information.
 2. The second part of this assignment was to create a MongoDB Database.
 3. After creating a MongoDB, it was time to create a Flask Application. This Flask Application turned the webscraping material into dictionaries so that the HTML script could read and publish all information related to Mars.
